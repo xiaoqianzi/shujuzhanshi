@@ -1,0 +1,23 @@
+*{ margin:0; padding:0; margin:0 auto; font-family:"微软雅黑";}
+ul,li{ list-style:none;}
+a{ text-decoration:none; outline:none;}
+img{ border:none;}
+.header{ width:100%; background:#101211; height:70px;}
+.head{ width:1200px; margin:0 auto;}
+.logo{ width:144px; height:36px; float:left; margin-top:15px;}
+.pbone-number{ width:168px; height:38px; float:right; background:url(../imges/phone-bg.jpg); margin-top:15px;}
+.pbone-number span{ color:#e1e0e0; padding-left:40px;display:block; height:38px; line-height:38px;font-family:Arial, Helvetica, sans-serif;}
+
+/* ------------------------------------导航栏------------------------------------- */
+
+.M-nav{height:70px;line-height:70px; float:left; margin-left:250px;}
+.M-nav ul li{float:left;display:block;}
+.M-nav ul li a{float:left;font-size:16px;font-family:"Segoe UI", "微软雅黑";color:#c6c6c6;height:70px;line-height:70px;display:block;}
+.M-nav ul li a:hover{color:#ffffff;}
+.M-nav ul li a.cur div p{margin-top:-20px !important;}
+#menu1 ul {padding: 0;}
+#menu1 ul li a{overflow: hidden;float: left;height: 20px;width: 100px;display: block;text-align: center;padding-bottom:25px;padding-top:25px;cursor:pointer;}
+#menu1 ul li a, #menu1 ul li a span {text-decoration: none;clear: both;display:block;color:#a9a9a9;font-family:"Segoe UI";font-size:14px;height:20px;line-height:20px;display:block;}
+#menu1 ul li a div{color:#ffffff;font-family:"微软雅黑";}
+#menu1 ul a div{float:left;width:100px;height:20px;display:block;overflow:hidden;}
+#menu1 ul li a font{color:#ffffff;font-family:"微软雅黑";display:block;}
