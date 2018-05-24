@@ -31,7 +31,7 @@
                 </li>
 
                 <li>
-                    <a href="about-us.html">
+                    <a href="#" style="onMouseOver: visible(this , 1); onMouseOut: visible(this , 0);">
                         <div style="margin-top: 0px;">
                             <p>
                                 <span>ABOUT</span>关于</p>
@@ -40,7 +40,7 @@
                 </li>
 
                 <li>
-                    <a href="case.html">
+                    <a href="#">
                         <div style="margin-top: 0px;">
                             <p>
                                 <span>CASE</span>案例</p>
@@ -49,7 +49,7 @@
                 </li>
 
                 <li>
-                    <a href="#ywtxid">
+                    <a href="#">
                         <div style="margin-top: 0px;">
                             <p>
                                 <span>BUSINESSY</span>业务体系</p>
@@ -58,7 +58,7 @@
                 </li>
 
                 <li>
-                    <a href="news.html">
+                    <a href="#">
                         <div style="margin-top: 0px;">
                             <p>
                                 <span>NEWS</span>新闻</p>
@@ -67,7 +67,7 @@
                 </li>
 
                 <li>
-                    <a href="contact.html">
+                    <a href="#">
                         <div style="margin-top: 0px;">
                             <p>
                                 <span>CONTACT</span>联系我们</p>
@@ -80,15 +80,31 @@
             <span>023-86682288</span>
         </div>
         <script>
-            var Menu1 = document.getElementById("menu1");
-            console.log(Menu1);
-            var Fora = Menu1.getElementsByTagName("a");
-            console.log(Fora);
-            document.ready(function(){
-                Fora.each(function(){
-                    
-                })
-            })
+            window.onload = function(){
+                //获取 css样式表中的信息
+                function getStyle(obj, attr) {
+                    if(obj.currentStyle) {   // 兼容IE
+                        return obj.currentStyle[attr];
+                    }else{
+                        return getComputedStyle(obj, false)[attr];
+                    }
+                }
+                var Menu1 = document.getElementById('menu1');
+                console.log(Menu1);
+                var Divs = Menu1.getElementsByTagName('div');
+                console.log(Divs);
+                timer = null;
+                function menu1in(){
+                    clearInterval(timer);
+                    // 获取当前位置信息
+                        var fucm = Divs.offsetWidth;
+                        timer = setInterval(function(){
+                            if(fucm <= 0){
+                                clearInterval(timer);
+                            }
+                        })
+                }
+            }
         </script>
     </div>
 </body>
