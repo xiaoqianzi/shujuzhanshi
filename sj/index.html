@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./css/forst.css">
+    <script src="./js/jquery-1.4.2.min.js"></script>
 </head>
 
 <body>
@@ -16,7 +17,32 @@
                 <img src="./imges/798204154177179299.png" width="144px" height="36px">
             </div>
         </div>
-
+        <script>
+            $(document).ready(function () {
+                $('#menu1 a').each(function () {      //给每个列表项
+                    var linkText = $(this).find('div').html();//查找标签内的文本
+                });
+                $('#menu1 a').hover(function () {     //hover是当鼠标放上去开始运行
+                    $(this).find('p').stop().animate({
+                        marginTop: "-20"            // 找到这个标签并移动
+                    }, 200);
+                }, function () {
+                    $(this).find('p').stop().animate({
+                        marginTop: "0"
+                    }, 200);
+                });
+            });
+            // window.onload = function(){
+            //     var Menu1 = document.getElementById("#menu1");
+            //     var Divs = Menu1.getElementsByName("div");
+            //     Divs.onmouseover = function(){
+            //         Divs.style.marginTop = "20px";
+            //     }
+            //     Divs.onmouseout = function(){
+            //         Divs.style.marginTop = "0px";
+            //     }
+            // }
+        </script>
         <div class="M-nav" id="menu1">
             <ul>
                 <li>
@@ -31,7 +57,7 @@
                 </li>
 
                 <li>
-                    <a href="#" style="onMouseOver: visible(this , 1); onMouseOut: visible(this , 0);">
+                    <a href="#">
                         <div style="margin-top: 0px;">
                             <p>
                                 <span>ABOUT</span>关于</p>
@@ -79,34 +105,59 @@
         <div class="pbone-number">
             <span>023-86682288</span>
         </div>
-        <script>
-            window.onload = function(){
-                //获取 css样式表中的信息
-                function getStyle(obj, attr) {
-                    if(obj.currentStyle) {   // 兼容IE
-                        return obj.currentStyle[attr];
-                    }else{
-                        return getComputedStyle(obj, false)[attr];
-                    }
-                }
-                var Menu1 = document.getElementById('menu1');
-                console.log(Menu1);
-                var Divs = Menu1.getElementsByTagName('div');
-                console.log(Divs);
-                timer = null;
-                function menu1in(){
-                    clearInterval(timer);
-                    // 获取当前位置信息
-                        var fucm = Divs.offsetWidth;
-                        timer = setInterval(function(){
-                            if(fucm <= 0){
-                                clearInterval(timer);
-                            }
-                        })
-                }
-            }
-        </script>
     </div>
+    <div id="menu2">
+
+    </div>
+    <script>
+        $(function () {
+            $('#menu2').click(function () {
+                var input = '';
+                input += "<table name= " + randomNumber + " width=\"450\"><tr>";
+                input += "<td width=\"72\"></td>";
+                input += "<td width=\"155\" align=\"left\">";
+                input += "<input type='text' name='m1' /></td>";
+                input += "<td align=\"left\" width=\"155\"><input type='text' name='m1' /></td>";
+                input += "<td><a onclick=\"del(" + randomNumber + ")\" style='cursor:pointer'>取消</a><span style=\"color:red\"></span></td></tr></table>";
+            })
+        })
+        // $.ajax({
+        //     url: './data.aspx',
+        //     type: 'get',
+        //     dataType: 'json',
+        //     success: function (val) {
+        //         console.log(val);
+        //     },
+        //     error: function () {
+        //         console.log('错误');
+        //     }
+        // })
+    </script>
+    <div class="poton-foot" style="bottom:0; position:absolute;">
+        <div class="foot-con">
+            <div class="copy">版权所有 © 2008-2015
+                <span>重庆攀腾科技有限公司.</span>
+                </br>
+                Copyright (c) 2015 wisdomfish. All Rights Reserved
+            </div>
+            <div class="cxjy">
+                <img src="imges/cxjy.png" width="250" height="100" />
+            </div>
+
+            <div class="share">
+                <a href="#">
+                    <img src="imges/xinlang-ico.jpg" width="33" height="33" />
+                </a>
+                <a href="#">
+                    <img src="imges/weibo-ico.jpg" width="33" height="33" />
+                </a>
+                <div class="qg-phone">全国免费服务电话：</br>
+                    <span>400-0110-555</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/five.js"></script>
 </body>
 
 </html>
