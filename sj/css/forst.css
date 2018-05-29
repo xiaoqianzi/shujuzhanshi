@@ -22,6 +22,10 @@ img{ border:none;}
 #menu1 ul a div{float:left;width:100px;height:20px;display:block;overflow:hidden;}
 #menu1 ul li a font{color:#ffffff;font-family:"微软雅黑";display:block;}
 
+/* ----------------------------------数据显示区域------------------------------------------ */
+
+#menu2 { margin-top: 100px; }
+
 /* ----------------------------------尾部------------------------------------------------- */
 
 .poton-foot{ width:100%; background:#16191a; width:100%; height:100px; float:left; }

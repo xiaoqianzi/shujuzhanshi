@@ -107,19 +107,37 @@
         </div>
     </div>
     <div id="menu2">
-
+        <pre name="code" class="html">    
+            <input type="text" class="inp mis1" id="loginusername" name="loginusername" value="请输入用户名..." />  
+            <input type="password" class="inp mis2" id="loginpassword" name="loginpassword" value="请输入密码..." />  
+            <input type="text" class="inp mis3" id="yzm" name="yzm" value="请输入验证码..." />  
+            <button class="inp">提交</button>
     </div>
     <script>
-        $(function () {
-            $('#menu2').click(function () {
-                var input = '';
-                input += "<table name= " + randomNumber + " width=\"450\"><tr>";
-                input += "<td width=\"72\"></td>";
-                input += "<td width=\"155\" align=\"left\">";
-                input += "<input type='text' name='m1' /></td>";
-                input += "<td align=\"left\" width=\"155\"><input type='text' name='m1' /></td>";
-                input += "<td><a onclick=\"del(" + randomNumber + ")\" style='cursor:pointer'>取消</a><span style=\"color:red\"></span></td></tr></table>";
-            })
+        $('#menu2').text(function () {
+            $(function () {
+                $(".inp").each(function () {
+                        var oldVal = $(this).val();
+                        $(this)
+                            .css({ "color": "#888" })
+                            //获得焦点  
+                            .focus(function () {
+                                if ($(this).val() != oldVal)
+                                    $(this).css({ "color": "#000" });
+                                else
+                                    $(this).val("").css({ "color": "#888" });
+                            })
+                            //失去焦点  
+                            .blur(function () {
+                                if ($(this).val() == "")
+                                    $(this).val(oldVal).css({ "color": "#888" });
+                            })
+                            //键盘按下  
+                            .keydown(function () {
+                                $(this).css({ "color": "#000" });
+                            });
+                    });
+            });
         })
         // $.ajax({
         //     url: './data.aspx',
@@ -136,7 +154,7 @@
     <div class="poton-foot" style="bottom:0; position:absolute;">
         <div class="foot-con">
             <div class="copy">版权所有 © 2008-2015
-                <span>重庆攀腾科技有限公司.</span>
+                <span>昂橙(重庆)信息技术有限公司.</span>
                 </br>
                 Copyright (c) 2015 wisdomfish. All Rights Reserved
             </div>
