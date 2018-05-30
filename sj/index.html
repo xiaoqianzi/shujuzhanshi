@@ -108,10 +108,10 @@
     </div>
     <div id="menu2">
         <pre name="code" class="html">    
-            <input type="text" class="inp mis1" id="loginusername" name="loginusername" value="请输入用户名..." />  
-            <input type="password" class="inp mis2" id="loginpassword" name="loginpassword" value="请输入密码..." />  
-            <input type="text" class="inp mis3" id="yzm" name="yzm" value="请输入验证码..." />  
-            <button class="inp">提交</button>
+            <span>用户名:<input type="text" class="inp mis1" id="loginusername" name="loginusername" value="" /></span>  
+            <span>密   码:<input type="password" class="inp mis2" id="loginpassword" name="loginpassword" value="" /></span>  
+            <span>验证码:<input type="text" class="inp mis3" id="yzm" name="yzm" value="" /></span>  
+            <button id="val_inp">提交</button>
     </div>
     <script>
         $('#menu2').text(function () {
@@ -138,6 +138,21 @@
                             });
                     });
             });
+            $(document).ready(function(){
+                $("#val_inp").click(function(){
+                    var Ress = $("#loginusername").val();
+                    console.log(Ress);
+                    var Rea = $("#loginpassword").val();
+                    console.log(Rea);
+                    var Yzm = $("#yzm").val();
+                    console.log(Yzm);
+                    if(Ress == 0 || Rea == 0 || Yzm == 0){
+                        alert("失败");
+                    }else{
+                        alert("成功");
+                    }
+                })
+            })
         })
         // $.ajax({
         //     url: './data.aspx',
