@@ -17,155 +17,44 @@
                 <img src="./imges/798204154177179299.png" width="144px" height="36px">
             </div>
         </div>
-        <script>
-            $(document).ready(function () {
-                $('#menu1 a').each(function () {      //给每个列表项
-                    var linkText = $(this).find('div').html();//查找标签内的文本
-                });
-                $('#menu1 a').hover(function () {     //hover是当鼠标放上去开始运行
-                    $(this).find('p').stop().animate({
-                        marginTop: "-20"            // 找到这个标签并移动
-                    }, 200);
-                }, function () {
-                    $(this).find('p').stop().animate({
-                        marginTop: "0"
-                    }, 200);
-                });
-            });
-            // window.onload = function(){
-            //     var Menu1 = document.getElementById("#menu1");
-            //     var Divs = Menu1.getElementsByName("div");
-            //     Divs.onmouseover = function(){
-            //         Divs.style.marginTop = "20px";
-            //     }
-            //     Divs.onmouseout = function(){
-            //         Divs.style.marginTop = "0px";
-            //     }
-            // }
-        </script>
-        <div class="M-nav" id="menu1">
+        <!-- <div class="M-nav" id="menu1">
             <ul>
                 <li>
                     <a href="index.html" class="cur">
                         <div style="margin-top: 0px;">
                             <p>
-                                <span>HOME</span>
-                                <font>首页</font>
+                                <span>alliance</span>
+                                <font>云商联盟</font>
                             </p>
                         </div>
                     </a>
                 </li>
 
-                <li>
-                    <a href="#">
-                        <div style="margin-top: 0px;">
-                            <p>
-                                <span>ABOUT</span>关于</p>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div style="margin-top: 0px;">
-                            <p>
-                                <span>CASE</span>案例</p>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div style="margin-top: 0px;">
-                            <p>
-                                <span>BUSINESSY</span>业务体系</p>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div style="margin-top: 0px;">
-                            <p>
-                                <span>NEWS</span>新闻</p>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div style="margin-top: 0px;">
-                            <p>
-                                <span>CONTACT</span>联系我们</p>
-                        </div>
-                    </a>
-                </li>
             </ul>
-        </div>
+        </div> -->
         <div class="pbone-number">
             <span>023-86682288</span>
         </div>
     </div>
-    <div id="menu2">
-        <pre name="code" class="html">    
-            <span>用户名:<input type="text" class="inp mis1" id="loginusername" name="loginusername" value="" /></span>  
-            <span>密   码:<input type="password" class="inp mis2" id="loginpassword" name="loginpassword" value="" /></span>  
-            <span>验证码:<input type="text" class="inp mis3" id="yzm" name="yzm" value="" /></span>  
-            <button id="val_inp">提交</button>
+    <div id="yslmbt">
+        <div class="yslm">
+            <span>云商联盟资源查询</span>
+        </div>
     </div>
-    <script>
-        $('#menu2').text(function () {
-            $(function () {
-                $(".inp").each(function () {
-                        var oldVal = $(this).val();
-                        $(this)
-                            .css({ "color": "#888" })
-                            //获得焦点  
-                            .focus(function () {
-                                if ($(this).val() != oldVal)
-                                    $(this).css({ "color": "#000" });
-                                else
-                                    $(this).val("").css({ "color": "#888" });
-                            })
-                            //失去焦点  
-                            .blur(function () {
-                                if ($(this).val() == "")
-                                    $(this).val(oldVal).css({ "color": "#888" });
-                            })
-                            //键盘按下  
-                            .keydown(function () {
-                                $(this).css({ "color": "#000" });
-                            });
-                    });
-            });
-            $(document).ready(function(){
-                $("#val_inp").click(function(){
-                    var Ress = $("#loginusername").val();
-                    console.log(Ress);
-                    var Rea = $("#loginpassword").val();
-                    console.log(Rea);
-                    var Yzm = $("#yzm").val();
-                    console.log(Yzm);
-                    if(Ress == 0 || Rea == 0 || Yzm == 0){
-                        alert("失败");
-                    }else{
-                        alert("成功");
-                    }
-                })
-            })
-        })
-        // $.ajax({
-        //     url: './data.aspx',
-        //     type: 'get',
-        //     dataType: 'json',
-        //     success: function (val) {
-        //         console.log(val);
-        //     },
-        //     error: function () {
-        //         console.log('错误');
-        //     }
-        // })
-    </script>
+    <div id="menu2">
+        <div class="yzm">
+            <div>
+                <span class="ptmc">平台名称:
+                    <input type="text" class="inp mis1" id="" name="loginusername" value="" placeholder="请输入平台名称" />
+                </span>
+                <span class="ptma">验&nbsp;&nbsp;证&nbsp;&nbsp;码:
+                    <input id="code_input" class="yzmsrk" type="text" value="" placeholder="请输入验证码" />
+                </span>
+                <div id="v_container" class="txyzm" style="width: 200px;height: 30px;"></div>
+            </div>
+            <button id="val_inp">提交</button>
+        </div>
+    </div>
     <div class="poton-foot" style="bottom:0; position:absolute;">
         <div class="foot-con">
             <div class="copy">版权所有 © 2008-2015
@@ -174,15 +63,15 @@
                 Copyright (c) 2015 wisdomfish. All Rights Reserved
             </div>
             <div class="cxjy">
-                <img src="imges/cxjy.png" width="250" height="100" />
+                <img src="./imges/cxjy.png" width="250" height="100" />
             </div>
 
             <div class="share">
                 <a href="#">
-                    <img src="imges/xinlang-ico.jpg" width="33" height="33" />
+                    <img src="./imges/xinlang-ico.jpg" width="33" height="33" />
                 </a>
                 <a href="#">
-                    <img src="imges/weibo-ico.jpg" width="33" height="33" />
+                    <img src="./imges/weibo-ico.jpg" width="33" height="33" />
                 </a>
                 <div class="qg-phone">全国免费服务电话：</br>
                     <span>400-0110-555</span>
@@ -190,7 +79,19 @@
             </div>
         </div>
     </div>
-    <script src="./js/five.js"></script>
+    <script src="./js/gVerify.js"></script>
+    <script>
+
+        var verifyCode = new GVerify("v_container");
+        $("#val_inp").on('click', function () {
+            var res = verifyCode.validate($("#code_input").val());
+            if (res) {
+                alert("验证正确");
+            } else {
+                alert("验证码错误");
+            }
+        })
+    </script>
 </body>
 
 </html>
