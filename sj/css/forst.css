@@ -4,8 +4,8 @@ a{ text-decoration:none; outline:none;}
 img{ border:none;}
 .header{ width:100%; background:#101211; height:70px;}
 .head{ width:1200px; margin:0 auto;}
-.logo{ width:144px; height:36px; float:left; margin-top:15px;}
-.pbone-number{ width:168px; height:38px; float:right; background:url(../imges/phone-bg.jpg); margin-top:15px;}
+.logo{ width:144px; height:36px; float:left; overflow:hidden; margin-top:15px;}
+.pbone-number{ width:168px; height:38px; float:right; overflow:hidden; background:url(../imges/phone-bg.jpg); margin-top:15px;}
 .pbone-number span{ color:#e1e0e0; padding-left:40px;display:block; height:38px; line-height:38px;font-family:Arial, Helvetica, sans-serif;}
 
 /* ------------------------------------导航栏------------------------------------- */
@@ -24,14 +24,14 @@ img{ border:none;}
 
 /* ---------------------------------云商联盟资源查询--------------------------------------------- */
 
-#yslmbt{ float: left; width: 100%; margin-top: 100px; }
+#yslmbt{ width: 100%; margin-top: 100px; }
 .yslm{ text-align: center; font-size: 30px; }
 
 
 /* ----------------------------------搜索栏及验证码区域------------------------------------------ */
 
-#menu2 { float: left; width: 100%; margin-top: 30px; text-align: center; }
-.yzm{ width: 16%;text-align: left; }
+.yzm{ text-align: center; }
+.yzm li{ margin-top: 10px; border: 1 solid pink; }
 
 /* ----------------------------------尾部------------------------------------------------- */
 
@@ -44,3 +44,7 @@ img{ border:none;}
 .share a{ float:left; width:33px; height:33px; margin-right:8px; margin-top:5px;}
 .qg-phone{ font-size:12px; color:#cbcbcb;}
 .qg-phone span{ font-size:18px;}
+
+/* ----------------------------------资料显示------------------------------------------------ */
+
+.yxzl li{ border: 1 solid pink; }
